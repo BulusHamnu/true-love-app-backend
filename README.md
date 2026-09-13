@@ -8,7 +8,11 @@ I was responsible for building and improving the backend system, including authe
 
 > Note: This backend was developed as part of my work with a company, where I was responsible for building and maintaining the system.
 
----
+## API Documentation
+
+Full API documentation, including all endpoints, request/response examples, and error cases, is available here: [Postman Documentation](https://documenter.getpostman.com/view/44782397/2sBYAytUaP)
+
+Base URL: https://true-love-backend-nodejs.onrender.com/api
 
 ## Tech Stack
 
@@ -18,8 +22,6 @@ I was responsible for building and improving the backend system, including authe
 - Redis + BullMQ (queues & cron jobs)
 - Resend (emails)
 - Joi (validation)
-
----
 
 ## Key Features
 
@@ -31,8 +33,6 @@ I was responsible for building and improving the backend system, including authe
 - Password reset system
 - Refresh token handling
 
----
-
 ### Payments & Checkout
 
 - Stripe Checkout integration
@@ -40,15 +40,11 @@ I was responsible for building and improving the backend system, including authe
 - Transaction recording system
 - Support for multiple product types (coaching & self-guided)
 
----
-
 ### Idempotency & Reliability
 
 - Implemented idempotency keys for safe payment retries
 - Prevents duplicate transactions
 - Handles race conditions during checkout
-
----
 
 ### Background Jobs & Cron
 
@@ -58,8 +54,6 @@ I was responsible for building and improving the backend system, including authe
 
 > Note: Worker runs in same process due to hosting limits (Render sleep behavior)
 
----
-
 ### User & Program System
 
 - Auto-create user during checkout (no signup required)
@@ -68,8 +62,6 @@ I was responsible for building and improving the backend system, including authe
   - Reflection messages
   - GPT-assisted responses (OpenAI integration)
 
----
-
 ### Security & Middleware
 
 - Helmet (security headers)
@@ -77,8 +69,6 @@ I was responsible for building and improving the backend system, including authe
 - Rate limiting
 - XSS sanitization
 - Centralized error handling
-
----
 
 ### Database Design
 
@@ -96,3 +86,5 @@ I was responsible for building and improving the backend system, including authe
 This repository reflects the original backend architecture and implementation created for the production [True-love-app](https://true-love.app/).
 
 The project workflow later transitioned into a Lovable-based setup for easier internal iteration and maintenance, so this repository is no longer the actively maintained production source.
+
+> Note: Rather than shutting this backend down, it has been left running for reference. Payments have been switched to Stripe test mode, so checkout still works end-to-end but no real charges are processed.
